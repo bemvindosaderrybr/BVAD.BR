@@ -1,0 +1,71 @@
+/* ===== Reset ===== */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#020205;color:#fff;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+
+/* Topbar com logo no canto superior esquerdo */
+.topbar{padding:18px 18px}
+.logo{height:52px;display:block}
+
+/* ===== HERO (index.html) ===== */
+.hero-wrap{position:relative;height:100vh;min-height:760px;overflow:hidden}
+.hero-image{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* CTA posicionado exatamente sobre o balão da imagem (ajustável) */
+.hero-cta{
+  position:absolute;
+  /* Estas coordenadas colocam o texto sobre o balão mais ou menos no centro */
+  left:50%;
+  top:46%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:320px;
+  height:320px;
+  pointer-events: auto;
+}
+.hero-cta-text{
+  background:transparent;
+  color:#000;
+  font-weight:800;
+  font-size:28px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-align:center;
+  /* sombra leve para contraste com o balão */
+  text-shadow:0 1px 0 rgba(255,255,255,0.3);
+}
+
+/* ===== EPISODES LIST (episodes.html) ===== */
+.episodes-wrap{padding:18px;max-width:720px;margin:0 auto}
+.episodes-title{font-size:30px;font-weight:800;margin:12px 0 18px}
+
+/* Lista vertical — cartões brancos arredondados */
+.episodes-list{display:flex;flex-direction:column;gap:18px;padding-bottom:60px}
+.episode-card{background:#fff;color:#000;border-radius:12px;height:140px;box-shadow:0 8px 18px rgba(0,0,0,0.6);overflow:hidden;display:flex;align-items:center;cursor:pointer;padding:10px}
+.episode-thumb{width:35%;height:120px;border-radius:8px;object-fit:cover;flex-shrink:0;background:#ddd}
+.episode-info{padding-left:14px;font-weight:700;font-size:18px;text-transform:uppercase}
+
+/* ===== EPISODE PAGE (episode.html) ===== */
+.episode-wrap{padding:18px;max-width:900px;margin:0 auto}
+.episode-main-title{font-size:28px;font-weight:800;margin-bottom:16px}
+
+/* White rounded rectangle for video area */
+.white-panel{background:#fff;border-radius:12px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.video-area{height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.video-area video{width:100%;height:100%;object-fit:cover;border-radius:8px;background:#000}
+.video-fallback{color:#444;font-weight:600}
+
+/* Back link */
+.back-link{display:inline-block;margin-top:18px;color:#cfcfcf}
+
+/* Pennywise bottom-left */
+.pennywise{position:fixed;left:8px;bottom:8px;width:140px;opacity:0.95;pointer-events:none}
+
+/* RESPONSIVE */
+@media(min-width:1000px){
+  .hero-cta{width:360px;height:360px;top:46%}
+  .episode-card{height:160px}
+  .video-area{height:520px}
+}
